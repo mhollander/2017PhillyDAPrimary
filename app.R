@@ -34,7 +34,7 @@ ui <- navbarPage("2017 Philly DA Primary Vote Explorer", id="nav",
         h2("Primary Results, by Ward and Division"),
         dataTableOutput("voteTable"),
         tags$div(id="cite",
-                 'Created by ', tags$a(href="mailto:hollander@gmail.com", "Michael Hollander"), "Available on ", tags$a(href="asdf","GitHub")
+                 'Created by ', tags$a(href="mailto:hollander@gmail.com", "Michael Hollander"), "Available on ", tags$a(href="https://github.com/mhollander/2017PhillyDAPrimary","GitHub")
         )
         
       ),
@@ -92,7 +92,6 @@ server <- function(input, output) {
                                   order = list(0,'asc'),
                                   searching=TRUE
                                 ), 
-                                #colnames=c("St House District","Dem", "Dem %", "Rep", "Rep %", "Clinton %", "Trump %"),
                                 class="stripe",
                                 rownames=FALSE
     ) 
